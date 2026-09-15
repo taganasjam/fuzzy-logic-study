@@ -1,0 +1,16 @@
+# YOLOv8 dataset config for Eggplant Shoot and Fruit Borer (EFSB) external symptom detection.
+# Paths are relative to this file's location once resolved by ultralytics (path: is the dataset root).
+
+path: ../data/external
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: healthy_shoot
+  1: wilted_shoot
+  2: healthy_fruit
+  3: damaged_fruit
+  4: bore_hole
+  5: frass
+  6: adult_moth
