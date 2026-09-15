@@ -1,16 +1,19 @@
-# YOLOv8 dataset config for Eggplant Shoot and Fruit Borer (EFSB) external symptom detection.
+# YOLOv8 dataset config for Eggplant Shoot and Fruit Borer (EFSB) detection.
+#
+# This is a single, unified detector trained on images from BOTH pools:
+#   - external field photos  -> can contain classes 0, 1, 2
+#   - dissection photos      -> can contain class 3 (only visible once cut open)
+# src/dataset/prepare_dataset.py merges both pools into the split below.
+#
 # Paths are relative to this file's location once resolved by ultralytics (path: is the dataset root).
 
-path: ../data/external
+path: ../data/yolo_dataset
 train: images/train
 val: images/val
 test: images/test
 
 names:
-  0: healthy_shoot
-  1: wilted_shoot
-  2: healthy_fruit
-  3: damaged_fruit
-  4: bore_hole
-  5: frass
-  6: adult_moth
+  0: bore_hole
+  1: frass
+  2: shoot_borer_larva
+  3: internal_infestation_damage

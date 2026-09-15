@@ -1,4 +1,5 @@
-"""Fine-tune YOLOv8 on the eggplant EFSB external-symptom dataset (Pool A).
+"""Fine-tune YOLOv8 on the merged eggplant EFSB dataset (external + dissection pools,
+produced by src/dataset/prepare_dataset.py).
 
 Usage:
     python src/yolo/train.py --data configs/data.yaml --model yolov8n.pt --epochs 100
